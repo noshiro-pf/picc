@@ -8,8 +8,11 @@ fn main() {
   }
 
   let value_str = &args[1];
-  let value_num = value_str.parse::<i32>().unwrap();
+  // let value_num = value_str.parse::<i32>().unwrap();
 
+  let chars = value_str.chars().collect();
+
+  // printf("  mov rax, %ld\n", strtol(p, &p, 10));
   // println!("input: {}", value_str);
   println!(".intel_syntax noprefix");
   println!(".globl main");
